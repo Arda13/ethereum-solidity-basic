@@ -4,7 +4,7 @@ contract Lottery {
     address public admin;
     address[] public players;
     
-    constructor() Lottery() public{
+    constructor() Lottery() public{  // constructor() or function() pick any by your version //
         admin = msg.sender;
     
     }
@@ -18,7 +18,7 @@ contract Lottery {
     
     function randomSelector() private view returns (uint256){
         
-        return uint(keccak256(block.difficulty, now, players));
+        return uint(keccak256(block.difficulty, now, players));  // there might be an issue by version solidity //
         
     }
     
